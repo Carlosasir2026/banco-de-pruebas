@@ -1,0 +1,31 @@
+services:
+  web:
+    build: .
+    container_name: conector-shopify-test
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./conector-shopify:/app
+      - ./logs:/app/logs
+      - db_data:/app/db
+    env_file:
+      - .env.test
+    command: python manage.py runserver 0.0.0.0:8000
+    depends_on:
+      - mock-verial
+    networks:
+      - test-network
+
+  mock-verial:
+    build: ./mock-verial
+    container_name: mock-verial-server
+    ports:
+      - "8080:8080"
+    networks:
+      - test-network
+volumes:
+  db_data:
+
+networks:
+  test-network:
+    driver: bridge

@@ -1,0 +1,15 @@
+# Entorno virtual
+venv/
+env/
+.env.test
+.env
+
+# Django
+db.sqlite3
+*.log
+__pycache__/
+static/
+media/
+
+# Otros
+.DS_Store
