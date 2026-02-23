@@ -1,0 +1,183 @@
+[90m= [39m[
+    {#5363
+      +"[1mcolumn_name[22m": "[32mtipo_de_alimento[39m",
+      +"[1mdata_type[22m": "[32mtext[39m",
+    },
+    {#5353
+      +"[1mcolumn_name[22m": "[32mnombre[39m",
+      +"[1mdata_type[22m": "[32mtext[39m",
+    },
+    {#5381
+      +"[1mcolumn_name[22m": "[32mprecio[39m",
+      +"[1mdata_type[22m": "[32mnumeric[39m",
+    },
+    {#5377
+      +"[1mcolumn_name[22m": "[32mcalorias[39m",
+      +"[1mdata_type[22m": "[32mnumeric[39m",
+    },
+    {#5358
+      +"[1mcolumn_name[22m": "[32mproteina_bruta[39m",
+      +"[1mdata_type[22m": "[32mnumeric[39m",
+    },
+    {#641
+      +"[1mcolumn_name[22m": "[32mgrasa_bruta[39m",
+      +"[1mdata_type[22m": "[32mnumeric[39m",
+    },
+    {#5372
+      +"[1mcolumn_name[22m": "[32mhumedad[39m",
+      +"[1mdata_type[22m": "[32mnumeric[39m",
+    },
+    {#5368
+      +"[1mcolumn_name[22m": "[32mcenizas[39m",
+      +"[1mdata_type[22m": "[32mnumeric[39m",
+    },
+    {#5376
+      +"[1mcolumn_name[22m": "[32mfibra[39m",
+      +"[1mdata_type[22m": "[32mnumeric[39m",
+    },
+    {#5351
+      +"[1mcolumn_name[22m": "[32mlisina[39m",
+      +"[1mdata_type[22m": "[32mnumeric[39m",
+    },
+    {#5382
+      +"[1mcolumn_name[22m": "[32mleucina[39m",
+      +"[1mdata_type[22m": "[32mnumeric[39m",
+    },
+    {#5383
+      +"[1mcolumn_name[22m": "[32marginina[39m",
+      +"[1mdata_type[22m": "[32mnumeric[39m",
+    },
+    {#5384
+      +"[1mcolumn_name[22m": "[32mvalina[39m",
+      +"[1mdata_type[22m": "[32mnumeric[39m",
+    },
+    {#5385
+      +"[1mcolumn_name[22m": "[32mtreonina[39m",
+      +"[1mdata_type[22m": "[32mnumeric[39m",
+    },
+    {#5386
+      +"[1mcolumn_name[22m": "[32misoleucina[39m",
+      +"[1mdata_type[22m": "[32mnumeric[39m",
+    },
+    {#5387
+      +"[1mcolumn_name[22m": "[32mfenilalanina[39m",
+      +"[1mdata_type[22m": "[32mnumeric[39m",
+    },
+    {#5388
+      +"[1mcolumn_name[22m": "[32mmetionina[39m",
+      +"[1mdata_type[22m": "[32mnumeric[39m",
+    },
+    {#5389
+      +"[1mcolumn_name[22m": "[32mhistidina[39m",
+      +"[1mdata_type[22m": "[32mnumeric[39m",
+    },
+    {#5390
+      +"[1mcolumn_name[22m": "[32mtriptofano[39m",
+      +"[1mdata_type[22m": "[32mnumeric[39m",
+    },
+    {#5391
+      +"[1mcolumn_name[22m": "[32mtaurina[39m",
+      +"[1mdata_type[22m": "[32mnumeric[39m",
+    },
+    {#5392
+      +"[1mcolumn_name[22m": "[32mcalcio[39m",
+      +"[1mdata_type[22m": "[32mnumeric[39m",
+    },
+    {#5393
+      +"[1mcolumn_name[22m": "[32mfosforo[39m",
+      +"[1mdata_type[22m": "[32mnumeric[39m",
+    },
+    {#5394
+      +"[1mcolumn_name[22m": "[32mhierro[39m",
+      +"[1mdata_type[22m": "[32mnumeric[39m",
+    },
+    {#5395
+      +"[1mcolumn_name[22m": "[32mzinc[39m",
+      +"[1mdata_type[22m": "[32mnumeric[39m",
+    },
+    {#5396
+      +"[1mcolumn_name[22m": "[32mpotasio[39m",
+      +"[1mdata_type[22m": "[32mnumeric[39m",
+    },
+    {#5397
+      +"[1mcolumn_name[22m": "[32msodio[39m",
+      +"[1mdata_type[22m": "[32mnumeric[39m",
+    },
+    {#5398
+      +"[1mcolumn_name[22m": "[32mmagnesio[39m",
+      +"[1mdata_type[22m": "[32mnumeric[39m",
+    },
+    {#5399
+      +"[1mcolumn_name[22m": "[32mcobre[39m",
+      +"[1mdata_type[22m": "[32mnumeric[39m",
+    },
+    {#5400
+      +"[1mcolumn_name[22m": "[32mvitamina_a[39m",
+      +"[1mdata_type[22m": "[32mnumeric[39m",
+    },
+    {#5401
+      +"[1mcolumn_name[22m": "[32mvitamina_d3[39m",
+      +"[1mdata_type[22m": "[32mnumeric[39m",
+    },
+    {#5402
+      +"[1mcolumn_name[22m": "[32mvitamina_e[39m",
+      +"[1mdata_type[22m": "[32mnumeric[39m",
+    },
+    {#5403
+      +"[1mcolumn_name[22m": "[32mvitamina_b3[39m",
+      +"[1mdata_type[22m": "[32mnumeric[39m",
+    },
+    {#5404
+      +"[1mcolumn_name[22m": "[32mvitamina_b12[39m",
+      +"[1mdata_type[22m": "[32mnumeric[39m",
+    },
+    {#5405
+      +"[1mcolumn_name[22m": "[32mvitamina_b6[39m",
+      +"[1mdata_type[22m": "[32mnumeric[39m",
+    },
+    {#5406
+      +"[1mcolumn_name[22m": "[32mvitamina_b1[39m",
+      +"[1mdata_type[22m": "[32mnumeric[39m",
+    },
+    {#5407
+      +"[1mcolumn_name[22m": "[32mvitamina_b2[39m",
+      +"[1mdata_type[22m": "[32mnumeric[39m",
+    },
+    {#5408
+      +"[1mcolumn_name[22m": "[32mvitamina_b5[39m",
+      +"[1mdata_type[22m": "[32mnumeric[39m",
+    },
+    {#5409
+      +"[1mcolumn_name[22m": "[32mvitamina_b9[39m",
+      +"[1mdata_type[22m": "[32mnumeric[39m",
+    },
+    {#5410
+      +"[1mcolumn_name[22m": "[32mcolina[39m",
+      +"[1mdata_type[22m": "[32mnumeric[39m",
+    },
+    {#5411
+      +"[1mcolumn_name[22m": "[32momega_6[39m",
+      +"[1mdata_type[22m": "[32mnumeric[39m",
+    },
+    {#5412
+      +"[1mcolumn_name[22m": "[32momega_3[39m",
+      +"[1mdata_type[22m": "[32mnumeric[39m",
+    },
+    {#5413
+      +"[1mcolumn_name[22m": "[32mgrasas_poliinsaturadas[39m",
+      +"[1mdata_type[22m": "[32mnumeric[39m",
+    },
+    {#5414
+      +"[1mcolumn_name[22m": "[32mgrasas_monoinsaturadas[39m",
+      +"[1mdata_type[22m": "[32mnumeric[39m",
+    },
+    {#5415
+      +"[1mcolumn_name[22m": "[32mgrasas_saturadas[39m",
+      +"[1mdata_type[22m": "[32mnumeric[39m",
+    },
+    {#5416
+      +"[1mcolumn_name[22m": "[32mid_alimento[39m",
+      +"[1mdata_type[22m": "[32minteger[39m",
+    },
+  ]
+
