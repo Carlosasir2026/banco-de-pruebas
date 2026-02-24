@@ -41,17 +41,17 @@ Route::prefix('v1')->group(function () {
     Route::get('/almacen/vegetal/enums', [AlmacenVegetalController::class, 'enums']);
     Route::get('/almacen/vegetal', [AlmacenVegetalController::class, 'index']);
     Route::get('/almacen/vegetal/{id}', [AlmacenVegetalController::class, 'show']);
-    //Route::post('/almacen/vegetal', [AlmacenVegetalController::class, 'store']);
-    //Route::put('/almacen/vegetal/{id}', [AlmacenVegetalController::class, 'update']);
-    //Route::delete('/almacen/vegetal/{id}', [AlmacenVegetalController::class, 'destrouy']);
+    Route::post('/almacen/vegetal', [AlmacenVegetalController::class, 'store']);
+    Route::put('/almacen/vegetal/{id}', [AlmacenVegetalController::class, 'update']);
+    Route::delete('/almacen/vegetal/{id}', [AlmacenVegetalController::class, 'destrouy']);
 
     // Almacén carne
     Route::get('/almacen/carne/enums', [AlmacenCarneController::class, 'enums']);
     Route::get('/almacen/carne', [AlmacenCarneController::class, 'index']);
     Route::get('/almacen/carne/{id}', [AlmacenCarneController::class, 'show']);
-    //Route::post('/almacen/carne', [AlmacenCarneController::class, 'store']);
-    //Route::put('/almacen/carne/{id}', [AlmacenCarneController::class, 'update']);
-    //Route::delete('/almacen/carne/{id}', [AlmacenCarneController::class, 'destroy']);
+    Route::post('/almacen/carne', [AlmacenCarneController::class, 'store']);
+    Route::put('/almacen/carne/{id}', [AlmacenCarneController::class, 'update']);
+    Route::delete('/almacen/carne/{id}', [AlmacenCarneController::class, 'destroy']);
 
     // Usuarios
     Route::post('/register', [UsuariosController::class, 'register']);
