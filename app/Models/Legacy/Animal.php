@@ -41,12 +41,9 @@ class Animal extends Model
         'especie' => 'string',
         'actividad' => 'string',
         'apetito' => 'string',
-        // NO: 'patologias' => 'array',
+        
     ];
 
-    /**
-     * Convierte array PHP -> literal Postgres {a,b}
-     */
     public function setPatologiasAttribute($value): void
     {
         if ($value === null) {

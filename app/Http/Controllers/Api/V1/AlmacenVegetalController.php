@@ -25,7 +25,7 @@ class AlmacenVegetalController extends Controller
             $query->where('nombre', 'ilike', "%{$q}%");
         }
 
-        $rows = $query->orderByDesc('ing_id')->limit(200)->get();
+        $rows = $query->orderByDesc('id_alimento')->limit(200)->get();
 
         return response()->json([
             'status' => 'success',

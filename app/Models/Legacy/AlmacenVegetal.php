@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class AlmacenVegetal extends Model
 {
     protected $table = 'almacen_vegetal';
-    protected $primaryKey = 'ing_id';
+    protected $primaryKey = 'id_alimento';
     public $incrementing = true;
     protected $keyType = 'int';
 
@@ -19,7 +19,7 @@ class AlmacenVegetal extends Model
     ];
 
     protected $casts = [
-        'ing_id' => 'integer',
+        'id_alimento' => 'integer',
         'categoria' => 'string',
         'nombre' => 'string',
     ];

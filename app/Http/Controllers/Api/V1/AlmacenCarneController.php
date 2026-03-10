@@ -20,7 +20,7 @@ class AlmacenCarneController extends Controller
         if ($animal !== '') $query->where('animal', $animal);
         if ($q !== '') $query->where('pieza', 'ilike', "%{$q}%");
 
-        $rows = $query->orderByDesc('ing_id')->limit(200)->get();
+        $rows = $query->orderByDesc('id_alimento')->limit(200)->get();
 
         return response()->json(['status' => 'success', 'items' => $rows]);
     }

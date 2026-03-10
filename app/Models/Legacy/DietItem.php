@@ -17,12 +17,12 @@ class DietItem extends Model
         'id_dieta',
         'ingrediente',
         'gramos',
-        'id_ing',
+        'id_alimento',
     ];
 
     protected $casts = [
         'id_dieta' => 'integer',
-        'id_ing' => 'integer',
+        'id_alimento' => 'integer',
         'gramos' => 'decimal:2',
     ];
 }

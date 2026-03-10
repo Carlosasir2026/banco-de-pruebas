@@ -5,10 +5,10 @@ namespace App\Http\Controllers\Api\V1;
 use App\Http\Controllers\Controller;
 use App\Models\Legacy\Dieta;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class DietasController extends Controller
 {
-    // GET /api/v1/dietas?id_animal=31
     public function index(Request $request)
     {
         $request->validate([
@@ -26,24 +26,33 @@ class DietasController extends Controller
         ]);
     }
 
-    // GET /api/v1/dietas/{id}
     public function show(int $id)
     {
-        $row = Dieta::findOrFail($id);
+        $row = Dieta::query()->where('id_dieta', $id)->firstOrFail();
+
+        $items = DB::table('diet_items')
+            ->where('id_dieta', $id)
+            ->orderBy('id_diet_item')
+            ->get([
+                'id_diet_item',
+                'id_dieta',
+                'ingrediente',
+                'gramos',
+                'id_alimento',
+            ]);
 
         return response()->json([
             'status' => 'success',
-            'dieta' => $row,
+            'dieta'  => $row,
+            'items'  => $items,
         ]);
     }
 
-    // POST /api/v1/dietas
     public function store(Request $request)
     {
         $data = $request->validate([
             'id_animal' => ['required','integer'],
             'nombre' => ['required','string','max:255'],
-            // array de strings (opcional)
             'ingredientes' => ['nullable','array'],
             'ingredientes.*' => ['string','max:255'],
         ]);
@@ -56,10 +65,9 @@ class DietasController extends Controller
         ], 201);
     }
 
-    // PUT /api/v1/dietas/{id}
     public function update(Request $request, int $id)
     {
-        $row = Dieta::findOrFail($id);
+        $row = Dieta::query()->where('id_dieta', $id)->firstOrFail();
 
         $data = $request->validate([
             'nombre' => ['sometimes','string','max:255'],
@@ -76,10 +84,12 @@ class DietasController extends Controller
         ]);
     }
 
-    // DELETE /api/v1/dietas/{id}
     public function destroy(int $id)
     {
-        $row = Dieta::findOrFail($id);
+        $row = Dieta::query()->where('id_dieta', $id)->firstOrFail();
+
+        DB::table('diet_items')->where('id_dieta', $id)->delete();
+
         $row->delete();
 
         return response()->json([

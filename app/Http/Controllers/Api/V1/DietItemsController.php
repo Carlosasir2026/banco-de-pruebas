@@ -28,7 +28,7 @@ class DietItemsController extends Controller
         $data = $request->validate([
             'ingrediente' => ['required','string','max:255'],
             'gramos' => ['required','numeric','min:0'],
-            'id_ing' => ['nullable','integer'],
+            'id_alimento' => ['nullable','integer'],
         ]);
 
         $row = DietItem::create([
@@ -50,7 +50,7 @@ class DietItemsController extends Controller
         $data = $request->validate([
             'ingrediente' => ['sometimes','string','max:255'],
             'gramos' => ['sometimes','numeric','min:0'],
-            'id_ing' => ['sometimes','nullable','integer'],
+            'id_alimento' => ['sometimes','nullable','integer'],
         ]);
 
         $row->fill($data);

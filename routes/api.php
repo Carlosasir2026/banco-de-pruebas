@@ -9,6 +9,15 @@ use App\Http\Controllers\Api\V1\DietItemsController;
 use App\Http\Controllers\Api\V1\AlmacenVegetalController;
 use App\Http\Controllers\Api\V1\AlmacenCarneController;
 use App\Http\Controllers\Api\V1\UsuariosController;
+use App\Http\Controllers\Api\V1\AuthGoogleController;
+use App\Http\Controllers\Api\V1\MedicalCheckupsController;
+use App\Http\Controllers\Api\V1\CitasVetController;
+use App\Http\Controllers\Api\V1\VacunasController;
+use App\Http\Controllers\Api\V1\DocumentosController;
+
+Route::options('/{any}', function () {
+    return response()->noContent();
+})->where('any', '.*');
 
 Route::prefix('v1')->group(function () {
     Route::post('/login', [AuthController::class, 'login']);
@@ -23,6 +32,7 @@ Route::prefix('v1')->group(function () {
     // Alimentos
     Route::get('/alimentos', [AlimentosController::class, 'index']);
     Route::get('/alimentos/{id}', [AlimentosController::class, 'show']);
+    Route::post('/alimentos/batch', [AlimentosController::class, 'batch']);
 
     // Dietas
     Route::get('/dietas', [DietasController::class, 'index']);
@@ -43,7 +53,7 @@ Route::prefix('v1')->group(function () {
     Route::get('/almacen/vegetal/{id}', [AlmacenVegetalController::class, 'show']);
     Route::post('/almacen/vegetal', [AlmacenVegetalController::class, 'store']);
     Route::put('/almacen/vegetal/{id}', [AlmacenVegetalController::class, 'update']);
-    Route::delete('/almacen/vegetal/{id}', [AlmacenVegetalController::class, 'destrouy']);
+    Route::delete('/almacen/vegetal/{id}', [AlmacenVegetalController::class, 'destroy']);
 
     // Almacén carne
     Route::get('/almacen/carne/enums', [AlmacenCarneController::class, 'enums']);
@@ -59,5 +69,27 @@ Route::prefix('v1')->group(function () {
     Route::get('/usuarios/by-email', [UsuariosController::class, 'byEmail']);
     Route::get('/usuarios/{id}', [UsuariosController::class, 'show']);
     Route::put('/usuarios/{id}', [UsuariosController::class, 'update']);
-    
+
+    //Auth Google
+    Route::post('/auth/google', [\App\Http\Controllers\Api\V1\AuthGoogleController::class, 'login']);
+
+    //Medical Checkup
+    Route::get('medical-checkups', [MedicalCheckupsController::class, 'index']);
+    Route::get('medical-checkups/latest', [MedicalCheckupsController::class, 'latest']);
+    Route::post('medical-checkups', [MedicalCheckupsController::class, 'store']);
+
+    //Citas
+    Route::get('citas-vet', [CitasVetController::class, 'index']);
+    Route::get('citas-vet/next', [CitasVetController::class, 'next']);
+    Route::post('citas-vet', [CitasVetController::class, 'store']);
+
+    //Vacunas
+    Route::get('/vacunas', [VacunasController::class, 'index']);
+    Route::post('/vacunas', [VacunasController::class, 'store']);
+
+    //Documentos
+    Route::get('documentos', [DocumentosController::class, 'index']);
+    Route::post('documentos', [DocumentosController::class, 'store']);
+    Route::delete('documentos/{id}', [DocumentosController::class, 'destroy']);
+
 });

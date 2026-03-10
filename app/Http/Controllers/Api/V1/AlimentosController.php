@@ -40,4 +40,35 @@ class AlimentosController extends Controller
             'alimento' => $row,
         ]);
     }
+
+    public function batch(Request $request)
+    {
+        $ids = $request->input('ids', []);
+
+        if (!is_array($ids) || count($ids) === 0) {
+            return response()->json([
+                'status' => 'success',
+                'alimentos' => (object)[],
+            ]);
+        }
+
+        // Sanitiza: solo ints, únicos, y limita para seguridad
+        $ids = array_values(array_unique(array_map('intval', $ids)));
+        $ids = array_slice($ids, 0, 500);
+
+        $rows = Alimento::query()
+            ->whereIn('id_alimento', $ids)
+            ->get();
+
+        // Devuelve como mapa por id para lookup O(1) en Flutter
+        $map = [];
+        foreach ($rows as $row) {
+            $map[(string)$row->id_alimento] = $row;
+        }
+
+        return response()->json([
+            'status' => 'success',
+            'alimentos' => $map,
+        ]);
+    }
 }
